@@ -23,7 +23,6 @@ const StyledCard = styled.div`
 	background-color: ${({ theme }) => theme.white_primary};
 	border-radius: ${({ theme }) => theme.radiusses.md};
 	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-	cursor: pointer;
 	transition: ${({ theme }) => theme.transitions.lg};
 	display: flex;
 	flex-direction: column;

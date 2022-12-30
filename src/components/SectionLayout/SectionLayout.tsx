@@ -1,24 +1,37 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 interface LayoutProps {
 	children: React.ReactNode;
+	id?: string;
 	cardSection?: boolean;
+	center?: boolean;
 }
 
-const SectionLayout = ({ children }: LayoutProps): JSX.Element => {
-	return <StyledLayout>{children}</StyledLayout>;
+const SectionLayout = ({ children, id, center }: LayoutProps): JSX.Element => {
+	return (
+		<StyledLayout id={id} center={center}>
+			{children}
+		</StyledLayout>
+	);
 };
 
 export default SectionLayout;
 
-const StyledLayout = styled.section`
+const StyledLayout = styled.section<LayoutProps>`
 	display: flex;
 	flex-direction: column;
 	gap: ${({ theme }) => theme.spacing.xxlg};
 	height: auto;
 	width: 100%;
 	padding-bottom: ${({ theme }) => theme.spacing.xlg};
+	${({ center }) => {
+		if (center) {
+			return css`
+				align-items: center;
+			`;
+		}
+	}};
 
 	.card-container {
 		display: flex;

@@ -36,7 +36,7 @@ const StyledCard = styled.div`
 
 	gap: 4px;
 	cursor: pointer;
-	transition: ${({ theme }) => theme.transitions.md} ease-in-out;
+	transition: ${({ theme }) => theme.transitions.md};
 
 	.img-container {
 		height: 190px;

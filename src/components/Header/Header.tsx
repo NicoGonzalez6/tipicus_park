@@ -2,18 +2,19 @@ import styled from 'styled-components';
 import Logo from '../../assets/Tipicus/Logo-tipicus-azul.png';
 import { FaBars } from 'react-icons/fa';
 import { useRef, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 interface links {
 	label: string;
-	id: string;
+	link: string;
 }
 
 const Header = (): JSX.Element => {
 	const navigationLinks: links[] = [
-		{ label: 'Inicio', id: '#home' },
-		{ label: 'Nosotros', id: '#us' },
-		{ label: 'Galeria', id: '#galery' },
-		{ label: 'Contacto', id: '#contact' },
+		{ label: 'Inicio', link: '/' },
+		{ label: 'Nosotros', link: 'cards-section' },
+		{ label: 'Contacto', link: 'galery-section' },
+		{ label: 'Precios', link: '/prices' },
 	];
 
 	const linksContainer = useRef<any>();
@@ -44,7 +45,11 @@ const Header = (): JSX.Element => {
 				<div className='links-container' ref={linksContainer}>
 					<ul ref={linksHeight}>
 						{navigationLinks.map((link, i) => {
-							return <li key={i}>{link.label}</li>;
+							return (
+								<li key={i}>
+									<Link to={link.link}>{link.label}</Link>
+								</li>
+							);
 						})}
 					</ul>
 				</div>
@@ -114,7 +119,7 @@ const StyledHeader = styled.header`
 
 		.links-container {
 			overflow: hidden;
-			transition: ${({ theme }) => theme.transitions.md} ease-in-out;
+			transition: ${({ theme }) => theme.transitions.md};
 
 			@media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 				width: 50%;
@@ -145,6 +150,13 @@ const StyledHeader = styled.header`
 				}
 
 				li {
+					a {
+						color: ${({ theme }) => theme.primary};
+						display: block;
+						width: 100%;
+						height: 100%;
+					}
+
 					padding: ${({ theme }) => theme.spacing.sm} 0px;
 					display: block;
 					cursor: pointer;

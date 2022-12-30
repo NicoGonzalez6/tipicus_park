@@ -10,14 +10,15 @@ import { heroBannerText } from '../../utils/heroText';
 import SectionLayout from '../../components/SectionLayout/SectionLayout';
 import { ticketInfo } from '../../utils/ticketInfo';
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
+import PageLayout from '../../components/PageLayout/PageLayout';
 
 const Home: React.FC = () => {
 	return (
-		<StyledHome>
-			<SectionLayout>
+		<PageLayout>
+			<SectionLayout id='home-section'>
 				<Hero images={heroImg} heroText={heroBannerText} />
 			</SectionLayout>
-			<SectionLayout cardSection={true}>
+			<SectionLayout cardSection={true} id='cards-section'>
 				<TitleSection
 					headerTitle='TIPICUS - PARQUE ACUATICO'
 					mainTitle='BIENVENIDOS'
@@ -30,7 +31,7 @@ const Home: React.FC = () => {
 					})}
 				</div>
 			</SectionLayout>
-			<SectionLayout>
+			<SectionLayout id='ticket-section'>
 				<TitleSection
 					mainTitle='ENTRADAS'
 					text={`Ofertas especiales!`}
@@ -39,40 +40,15 @@ const Home: React.FC = () => {
 					return <ServiceCard {...service}></ServiceCard>;
 				})}
 			</SectionLayout>
-			<SectionLayout>
+			<SectionLayout id='galery-section'>
 				<TitleSection
 					text='¡Disfruta de tipicus como vos quieras!'
 					mainTitle='GALERIA'
 				/>
 				<Slider images={images} />
 			</SectionLayout>
-		</StyledHome>
+		</PageLayout>
 	);
 };
 
 export default Home;
-
-const StyledHome = styled.section`
-	min-height: 80vh;
-	height: auto;
-	padding: ${({ theme }) => theme.container_spacing.home_container};
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: ${({ theme }) => theme.spacing.xlg};
-
-	@media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-		width: ${({ theme }) => theme.container_widths.sm};
-		margin: 0 auto;
-	}
-
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-		width: ${({ theme }) => theme.container_widths.md};
-		margin: 0 auto;
-	}
-
-	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-		width: ${({ theme }) => theme.container_widths.lg};
-		margin: 0 auto;
-	}
-`;

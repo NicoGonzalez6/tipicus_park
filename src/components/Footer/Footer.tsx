@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 import Text from '../Text/Text';
 import { AiOutlineInstagram, AiOutlineFacebook } from 'react-icons/ai';

@@ -18,6 +18,14 @@ export default createGlobalStyle`
         text-decoration: none;
     }
 
+	a{
+		padding: 0;
+        margin: 0;
+        list-style: none;
+        text-decoration: none;
+		
+	}
+
 	
 `;
 
@@ -39,9 +47,9 @@ export const defaultTheme: DefaultTheme = {
 		home_container: '20px',
 	},
 	transitions: {
-		sm: '0.1s',
-		md: '0.2s',
-		lg: '0.3s',
+		sm: '0.1s ease-in-out',
+		md: '0.2s ease-in-out',
+		lg: '0.3s ease-in-out',
 	},
 	breakpoints: {
 		sm: '768px',

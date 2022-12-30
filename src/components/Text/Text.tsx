@@ -6,6 +6,7 @@ interface TextProps {
 	textColor?: string;
 	textType?: string;
 	textBold?: boolean;
+	style?: string;
 }
 
 const Text = ({
@@ -13,12 +14,14 @@ const Text = ({
 	textColor = 'white',
 	textType,
 	textBold,
+	style,
 }: TextProps): JSX.Element => {
 	return (
 		<StyledText
 			textType={textType}
 			textColor={textColor}
 			textBold={textBold}
+			style={style}
 		>
 			{children}
 		</StyledText>
@@ -34,6 +37,8 @@ const StyledText = styled.p<TextProps>`
 				return theme.white_primary;
 			case 'primary':
 				return theme.primary;
+			case 'tertiary':
+				return theme.tertiary;
 		}
 	}};
 	font-weight: ${({ textBold }) => {
@@ -49,6 +54,8 @@ const StyledText = styled.p<TextProps>`
 		switch (textType) {
 			case 'title':
 				return '25px';
+			case 'subtitle-header':
+				return '18px';
 			case 'subtitle':
 				return '14px';
 			case 'text':
