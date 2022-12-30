@@ -1,23 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import Card from '../Card/Card';
+import Card from '../../components/Card/Card';
 import { cardInfo } from '../../utils/cardInfo';
-import TitleSection from '../TitleSection/TitleSection';
-import Slider from '../Slider/Slider';
+import TitleSection from '../../components/TitleSection/TitleSection';
+import Slider from '../../components/Slider/Slider';
+import { images, heroImg } from '../../utils/images';
+import Hero from '../../components/Hero/Hero';
+import { heroBannerText } from '../../utils/heroText';
 
 const Home: React.FC = () => {
-	const headerTitle = 'TIPICUS - PARQUE ACUATICO';
-	const mainTitle = 'BIENVENIDOS';
-	const text = `Pensamos en algo para los chicos y grandes, para que las
-				vacaciones sean inolvidables…`;
-
 	return (
 		<StyledHome>
+			<HeroSection>
+				<Hero images={heroImg} heroText={heroBannerText} />
+			</HeroSection>
 			<CardSection>
 				<TitleSection
-					headerTitle={headerTitle}
-					mainTitle={mainTitle}
-					text={text}
+					headerTitle='TIPICUS - PARQUE ACUATICO'
+					mainTitle='BIENVENIDOS'
+					text={`Pensamos en algo para los chicos y grandes, para que las
+				vacaciones sean inolvidables…`}
 				/>
 				<div className='card-container'>
 					{cardInfo.map((card) => {
@@ -28,10 +30,10 @@ const Home: React.FC = () => {
 			<GalerySection>
 				<TitleSection
 					text='Disfruta de tipicus como vos quieras!'
-					mainTitle={'GALERIA'}
+					mainTitle='GALERIA'
 				/>
 				<div className='slider-container'>
-					<Slider></Slider>
+					<Slider images={images} />
 				</div>
 			</GalerySection>
 		</StyledHome>
@@ -65,6 +67,15 @@ const StyledHome = styled.section`
 	}
 `;
 
+const HeroSection = styled.section`
+	display: flex;
+	flex-direction: column;
+	gap: ${({ theme }) => theme.spacing.xxlg};
+	height: auto;
+	width: 100%;
+	padding-bottom: ${({ theme }) => theme.spacing.xlg};
+`;
+
 const CardSection = styled.section`
 	display: flex;
 	flex-direction: column;
@@ -89,7 +100,4 @@ const GalerySection = styled.section`
 	gap: ${({ theme }) => theme.spacing.xxlg};
 	min-height: 50vh;
 	width: 100%;
-
-	.slider-container {
-	}
 `;

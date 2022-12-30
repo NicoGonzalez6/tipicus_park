@@ -43,7 +43,7 @@ declare module 'styled-components' {
 	export interface DefaultTheme {
 		white_primary: string;
 		white_secundary: string;
-
+		tertiary: string;
 		primary: string;
 		secundary: string;
 		spacing: spacing;

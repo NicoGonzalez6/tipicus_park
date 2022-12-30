@@ -24,6 +24,7 @@ export default createGlobalStyle`
 export const defaultTheme: DefaultTheme = {
 	white_primary: '#fff',
 	white_secundary: '#f8f9f9',
+	tertiary: '#ff2a00',
 	secundary: '#222222',
 	primary: '#0a3165',
 	spacing: {
