@@ -19,7 +19,7 @@ const Hero: React.FC<any> = ({ images, heroText }) => {
 					Parque acuatico - diversión asegurada
 				</Text>
 			</div>
-			<Slider images={images} showNav={false} />;
+			<Slider images={images} showNav={false} />
 		</StyledHero>
 	);
 };
@@ -41,22 +41,42 @@ const StyledHero = styled.div`
 		flex-direction: column;
 		text-align: center;
 		gap: ${({ theme }) => theme.spacing.md};
+		width: 100%;
+		box-sizing: border-box;
 
 		p {
 			border-radius: 10px;
 			background-color: ${({ theme }) => theme.tertiary};
-			padding: 10px;
+			padding: 5px 5px;
 			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+			font-size: 14px !important;
+			margin: 0 auto;
+			max-width: 340px;
+			box-sizing: border-box;
+			text-align: center;
+
+			@media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+				font-size: 18px !important;
+				max-width: 400px;
+			}
 		}
 
 		span {
 			color: ${({ theme }) => theme.white_primary};
 			font-weight: 900;
-			font-size: 40px !important;
+			font-size: 25px !important;
 			background-color: ${({ theme }) => theme.tertiary};
 			border-radius: 10px;
-			padding: 10px 0;
+			padding: 5px 10px;
 			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+			max-width: 280px;
+			box-sizing: border-box;
+			margin: 0 auto;
+
+			@media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+				font-size: 35px !important;
+				max-width: 400px;
+			}
 		}
 	}
 `;
