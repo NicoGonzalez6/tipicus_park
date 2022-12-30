@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Text from '../Text/Text';
 import { cardInfoInterface } from '../../utils/cardInfo';
 
-const Card: React.FC<cardInfoInterface> = ({ title, text, img }) => {
+const Card = ({ title, text, img }: cardInfoInterface): JSX.Element => {
 	return (
 		<StyledCard>
 			<div className='img-container'>
@@ -28,7 +28,7 @@ export default Card;
 const StyledCard = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 280px;
+	min-height: 260px;
 	width: 100%;
 	max-width: 340px;
 	box-sizing: border-box;

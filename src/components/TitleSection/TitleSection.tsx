@@ -7,11 +7,11 @@ interface TitleSectionInterface {
 	text?: string;
 }
 
-const TitleSection: React.FC<TitleSectionInterface> = ({
+const TitleSection = ({
 	headerTitle,
 	mainTitle,
 	text,
-}) => {
+}: TitleSectionInterface): JSX.Element => {
 	return (
 		<StyledTitleSection>
 			{headerTitle && (

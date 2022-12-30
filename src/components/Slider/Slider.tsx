@@ -3,7 +3,7 @@ import 'swiper/css';
 import styled from 'styled-components';
 import ImageGallery from 'react-image-gallery';
 
-const Slider: React.FC<any> = ({ images, showNav }) => {
+const Slider = ({ images, showNav }: any): JSX.Element => {
 	SwiperCore.use([Autoplay, Navigation, Pagination]);
 
 	return (
@@ -37,7 +37,7 @@ const SliderContainer = styled.div`
 		max-height: 80vh;
 		object-fit: cover;
 		object-position: center center;
-		border-radius: 5px;
+		border-radius: ${({ theme }) => theme.radiusses.sm};
 		@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
 			height: 500px;
 		}

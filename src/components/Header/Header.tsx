@@ -8,7 +8,7 @@ interface links {
 	id: string;
 }
 
-const Header: React.FC = () => {
+const Header = (): JSX.Element => {
 	const navigationLinks: links[] = [
 		{ label: 'Inicio', id: '#home' },
 		{ label: 'Nosotros', id: '#us' },

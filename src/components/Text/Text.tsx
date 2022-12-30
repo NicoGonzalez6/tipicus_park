@@ -8,12 +8,12 @@ interface TextProps {
 	textBold?: boolean;
 }
 
-const Text: React.FC<TextProps> = ({
+const Text = ({
 	children,
 	textColor = 'white',
 	textType,
 	textBold,
-}) => {
+}: TextProps): JSX.Element => {
 	return (
 		<StyledText
 			textType={textType}

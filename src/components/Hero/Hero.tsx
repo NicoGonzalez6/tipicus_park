@@ -4,7 +4,7 @@ import Slider from '../Slider/Slider';
 import Text from '../Text/Text';
 import { TypeAnimation } from 'react-type-animation';
 
-const Hero: React.FC<any> = ({ images, heroText }) => {
+const Hero = ({ images, heroText }: any): JSX.Element => {
 	return (
 		<StyledHero>
 			<div className='banner-text'>
@@ -45,7 +45,7 @@ const StyledHero = styled.div`
 		box-sizing: border-box;
 
 		p {
-			border-radius: 10px;
+			border-radius: ${({ theme }) => theme.radiusses.md};
 			background-color: ${({ theme }) => theme.tertiary};
 			padding: 5px 5px;
 			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
@@ -66,7 +66,7 @@ const StyledHero = styled.div`
 			font-weight: 900;
 			font-size: 25px !important;
 			background-color: ${({ theme }) => theme.tertiary};
-			border-radius: 10px;
+			border-radius: ${({ theme }) => theme.radiusses.md};
 			padding: 5px 10px;
 			box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
 			max-width: 280px;

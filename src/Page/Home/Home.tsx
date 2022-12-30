@@ -7,14 +7,17 @@ import Slider from '../../components/Slider/Slider';
 import { images, heroImg } from '../../utils/images';
 import Hero from '../../components/Hero/Hero';
 import { heroBannerText } from '../../utils/heroText';
+import SectionLayout from '../../components/SectionLayout/SectionLayout';
+import { ticketInfo } from '../../utils/ticketInfo';
+import ServiceCard from '../../components/ServiceCard/ServiceCard';
 
 const Home: React.FC = () => {
 	return (
 		<StyledHome>
-			<HeroSection>
+			<SectionLayout>
 				<Hero images={heroImg} heroText={heroBannerText} />
-			</HeroSection>
-			<CardSection>
+			</SectionLayout>
+			<SectionLayout cardSection={true}>
 				<TitleSection
 					headerTitle='TIPICUS - PARQUE ACUATICO'
 					mainTitle='BIENVENIDOS'
@@ -26,16 +29,23 @@ const Home: React.FC = () => {
 						return <Card {...card} />;
 					})}
 				</div>
-			</CardSection>
-			<GalerySection>
+			</SectionLayout>
+			<SectionLayout>
 				<TitleSection
-					text='Disfruta de tipicus como vos quieras!'
+					mainTitle='ENTRADAS'
+					text={`Ofertas especiales!`}
+				/>
+				{ticketInfo.map((service) => {
+					return <ServiceCard {...service}></ServiceCard>;
+				})}
+			</SectionLayout>
+			<SectionLayout>
+				<TitleSection
+					text='¡Disfruta de tipicus como vos quieras!'
 					mainTitle='GALERIA'
 				/>
-				<div className='slider-container'>
-					<Slider images={images} />
-				</div>
-			</GalerySection>
+				<Slider images={images} />
+			</SectionLayout>
 		</StyledHome>
 	);
 };
@@ -65,39 +75,4 @@ const StyledHome = styled.section`
 		width: ${({ theme }) => theme.container_widths.lg};
 		margin: 0 auto;
 	}
-`;
-
-const HeroSection = styled.section`
-	display: flex;
-	flex-direction: column;
-	gap: ${({ theme }) => theme.spacing.xxlg};
-	height: auto;
-	width: 100%;
-	padding-bottom: ${({ theme }) => theme.spacing.xlg};
-`;
-
-const CardSection = styled.section`
-	display: flex;
-	flex-direction: column;
-	gap: ${({ theme }) => theme.spacing.xxlg};
-
-	.card-container {
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		gap: ${({ theme }) => theme.spacing.lg};
-
-		@media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-			justify-content: space-evenly;
-		}
-	}
-`;
-
-const GalerySection = styled.section`
-	display: flex;
-	flex-direction: column;
-	gap: ${({ theme }) => theme.spacing.xxlg};
-	min-height: 50vh;
-	width: 100%;
 `;
