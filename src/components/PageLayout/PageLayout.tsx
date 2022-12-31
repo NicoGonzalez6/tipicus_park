@@ -3,11 +3,11 @@ import styled from 'styled-components';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 
-interface PageLayout {
+interface PageLayoutInterface {
 	children: React.ReactNode;
 }
 
-const PageLayout = ({ children }: PageLayout): JSX.Element => {
+const PageLayout = ({ children }: PageLayoutInterface): JSX.Element => {
 	return (
 		<>
 			<Header />

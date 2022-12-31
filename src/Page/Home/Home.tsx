@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+
 import Card from '../../components/Card/Card';
 import { cardInfo } from '../../utils/cardInfo';
 import TitleSection from '../../components/TitleSection/TitleSection';
