@@ -13,14 +13,14 @@ const ResidentSwitcher = ({
 	onChange,
 }: SwitcherInterface): JSX.Element => {
 	return (
-		<StyledSwitcher value={value} onClick={onChange}>
+		<StyledSwitcher value={value} onClick={onChange} data-cy='Switch'>
 			{label && (
 				<Text textType='subtitle' textColor='primary' textBold>
 					{label}
 				</Text>
 			)}
 			<div className='switcher'>
-				<input type='checkbox' checked={value} />
+				<input type='checkbox' checked={value} data-cy='Switch-input' />
 			</div>
 		</StyledSwitcher>
 	);

@@ -5,16 +5,16 @@ import { cardInfoInterface } from '../../utils/cardInfo';
 
 const Card = ({ title, text, img }: cardInfoInterface): JSX.Element => {
 	return (
-		<StyledCard>
-			<div className='img-container'>
+		<StyledCard data-cy='Card'>
+			<div className='img-container' data-cy='Card-img'>
 				<img src={img} alt='imagenes del parque' />
 			</div>
-			<div className='title-container'>
+			<div className='title-container' data-cy='Card-title'>
 				<Text textType='subtitle' textColor='primary' textBold={true}>
 					{title}
 				</Text>
 			</div>
-			<div className='text-container'>
+			<div className='text-container' data-cy='Card-text'>
 				<Text textType='text' textColor='primary'>
 					{text}
 				</Text>

@@ -8,7 +8,7 @@ const Footer = (): JSX.Element => {
 	};
 
 	return (
-		<StyledFooter>
+		<StyledFooter data-cy='Footer'>
 			<div className='social-media'>
 				<AiOutlineInstagram
 					target='_blank'

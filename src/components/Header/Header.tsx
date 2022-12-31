@@ -25,7 +25,7 @@ const Header = (): JSX.Element => {
 	}, [show]);
 
 	return (
-		<StyledHeader>
+		<StyledHeader data-cy='Header'>
 			<div className='nav-center'>
 				<div className='logo-container'>
 					<img src={Logo} alt='Logo del parque' />
