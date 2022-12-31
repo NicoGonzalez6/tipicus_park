@@ -1,10 +1,9 @@
-import React from 'react';
 import styled from 'styled-components';
 import { pricesInterface } from '../../utils/pricesInfo';
 import Text from '../Text/Text';
 import Logo from '../../assets/Tipicus/Logo-tipicus-blanco.png';
 
-interface PriceCard extends pricesInterface {
+interface PriceCardInterface extends pricesInterface {
 	residentState: boolean;
 }
 
@@ -13,7 +12,7 @@ const PriceCard = ({
 	not_residents,
 	residents,
 	residentState,
-}: PriceCard): JSX.Element => {
+}: PriceCardInterface): JSX.Element => {
 	return (
 		<CardContainer>
 			<Text textType='subtitle-header' textColor='primary' textBold>
@@ -45,7 +44,7 @@ const PriceCard = ({
 						<Text textType='subtitle'>{`Jornada Completa`}</Text>
 					</div>
 				</div>
-				<img src={Logo}></img>
+				<img src={Logo} alt='logo'></img>
 			</StyledCard>
 		</CardContainer>
 	);

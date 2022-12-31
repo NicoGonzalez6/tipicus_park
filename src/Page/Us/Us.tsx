@@ -64,8 +64,9 @@ const StyledUs = styled.div`
 	justify-content: space-between;
 	flex-direction: column;
 	gap: ${({ theme }) => theme.spacing.xlg};
+	padding-top: ${({ theme }) => theme.spacing.xlg};
 
-	@media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+	@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
 		flex-direction: row;
 	}
 

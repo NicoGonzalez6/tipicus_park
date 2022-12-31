@@ -46,7 +46,7 @@ const StyledMap = styled.div`
 
 	.leaflet-container {
 		width: 100%;
-		height: 300px;
+		height: 500px;
 		border-radius: ${({ theme }) => theme.radiusses.md};
 		@media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
 			height: 500px;
