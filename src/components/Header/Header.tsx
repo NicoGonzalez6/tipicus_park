@@ -3,20 +3,9 @@ import Logo from '../../assets/Tipicus/Logo-tipicus-azul.png';
 import { FaBars } from 'react-icons/fa';
 import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-
-interface links {
-	label: string;
-	link: string;
-}
+import { navigationLinks } from '../../utils/navigation';
 
 const Header = (): JSX.Element => {
-	const navigationLinks: links[] = [
-		{ label: 'Inicio', link: '/' },
-		{ label: 'Nosotros', link: 'cards-section' },
-		{ label: 'Contacto', link: 'galery-section' },
-		{ label: 'Precios', link: '/prices' },
-	];
-
 	const linksContainer = useRef<any>();
 	const linksHeight = useRef<any>(null);
 
@@ -155,14 +144,17 @@ const StyledHeader = styled.header`
 						display: block;
 						width: 100%;
 						height: 100%;
+
+						&:hover {
+							color: ${({ theme }) => theme.white_primary};
+						}
 					}
 
 					padding: ${({ theme }) => theme.spacing.sm} 0px;
 					display: block;
 					cursor: pointer;
 					color: ${({ theme }) => theme.primary};
-					transition: ${({ theme }) => theme.transitions.md}
-						ease-in-out;
+					transition: ${({ theme }) => theme.transitions.md};
 
 					&:hover {
 						padding: ${({ theme }) => {
@@ -180,6 +172,12 @@ const StyledHeader = styled.header`
 						position: relative;
 						padding-bottom: ${({ theme }) => theme.spacing.sm};
 
+						a {
+							&:hover {
+								color: ${({ theme }) => theme.primary};
+							}
+						}
+
 						&::after {
 							content: '';
 							position: absolute;
@@ -188,8 +186,7 @@ const StyledHeader = styled.header`
 							height: 2px;
 							background-color: ${({ theme }) => theme.primary};
 							left: 0;
-							transition: ${({ theme }) => theme.transitions.md}
-								ease-in-out;
+							transition: ${({ theme }) => theme.transitions.md};
 						}
 
 						&:hover {

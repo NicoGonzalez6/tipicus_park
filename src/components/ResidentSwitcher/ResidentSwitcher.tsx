@@ -78,7 +78,7 @@ const StyledSwitcher = styled.div<SwitcherInterface>`
 						-webkit-appearance: none;
 						position: absolute;
 						top: 50%;
-						left: 10px;
+						left: 11px;
 						display: flex;
 						align-items: center;
 						transform: translateY(-52%);
@@ -102,7 +102,7 @@ const StyledSwitcher = styled.div<SwitcherInterface>`
 						-webkit-appearance: none;
 						position: absolute;
 						top: 50%;
-						left: 7px;
+						left: 8px;
 						display: flex;
 						align-items: center;
 						transform: translateY(-52%);
