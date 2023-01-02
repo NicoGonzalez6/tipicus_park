@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Text from '../Text/Text';
-import { cardInfoInterface } from '../../utils/cardInfo';
+import { cardInfoInterface } from '../../constants/cardInfo';
 
 const Card = ({ title, text, img }: cardInfoInterface): JSX.Element => {
 	return (

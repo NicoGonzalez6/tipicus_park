@@ -46,16 +46,7 @@ const StyledMap = styled.div`
 
 	.leaflet-container {
 		width: 100%;
-		height: 500px;
+		height: 380px;
 		border-radius: ${({ theme }) => theme.radiusses.md};
-		@media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
-			height: 500px;
-		}
-		@media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
-			height: 500px;
-		}
-		@media (min-width: ${({ theme }) => theme.breakpoints.xl}) {
-			height: 500px;
-		}
 	}
 `;

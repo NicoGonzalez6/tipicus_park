@@ -1,14 +1,14 @@
 import React from 'react';
 
 import Card from '../../components/Card/Card';
-import { cardInfo } from '../../utils/cardInfo';
+import { cardInfo } from '../../constants/cardInfo';
 import TitleSection from '../../components/TitleSection/TitleSection';
 import Slider from '../../components/Slider/Slider';
-import { images, heroImg } from '../../utils/images';
+import { images, heroImg } from '../../constants/images';
 import Hero from '../../components/Hero/Hero';
-import { heroBannerText } from '../../utils/heroText';
+import { heroBannerText } from '../../constants/heroText';
 import SectionLayout from '../../components/SectionLayout/SectionLayout';
-import { ticketInfo } from '../../utils/ticketInfo';
+import { ticketInfo } from '../../constants/ticketInfo';
 import ServiceCard from '../../components/ServiceCard/ServiceCard';
 import PageLayout from '../../components/PageLayout/PageLayout';
 

@@ -24,6 +24,7 @@ const StyledLayout = styled.section<LayoutProps>`
 	gap: ${({ theme }) => theme.spacing.xxlg};
 	height: auto;
 	width: 100%;
+
 	padding-bottom: ${({ theme }) => theme.spacing.xlg};
 	${({ center }) => {
 		if (center) {

@@ -69,9 +69,9 @@ const StyledSwitcher = styled.div<SwitcherInterface>`
 					input {
 						left: 65px;
 					}
-					[type='checkbox']:checked {
+					/* [type='checkbox']:checked {
 						background-color: ${({ theme }) => theme.primary};
-					}
+					} */
 
 					input::before {
 						content: 'Si';
@@ -87,7 +87,7 @@ const StyledSwitcher = styled.div<SwitcherInterface>`
 						height: 40px;
 						cursor: pointer;
 						border-radius: 50%;
-						color: ${({ theme }) => theme.white_primary};
+						//color: ${({ theme }) => theme.white_primary};
 						font-family: 'Montserrat', sans-serif;
 					}
 				`;

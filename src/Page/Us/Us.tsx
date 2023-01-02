@@ -12,7 +12,7 @@ const Us = (): JSX.Element => {
 			<SectionLayout>
 				<TitleSection
 					headerTitle='TIPICUS - PARQUE ACUATICO'
-					mainTitle='Donde encontrarnos'
+					mainTitle='DONDE ENCONTRARNOS'
 				/>
 				<StyledUs>
 					<div className='map-section'>
@@ -23,26 +23,18 @@ const Us = (): JSX.Element => {
 							Dirección
 						</Text>
 						<Text textType='subtitle' textColor='white'>
-							Estamos en RP11 KM 319 1/2, B7106, Los Toninas, La
+							Estamos en RP11 KM 318 1/2, B7106, Los Toninas, La
 							Costa, Bs As . Argentina
 						</Text>
 						<Text textType='subtitle' textColor='white'>
-							Doble acceso al parque: a 500 mts. de la entrada de
-							Las Toninas a través de ruta o a través de la
-							rotonda principal de Las Toninas
+							Doble acceso al parque: Acceso por RP11 o por
+							diagonal "B"
 						</Text>
 						<Text textType='title' textColor='tertiary'>
 							Temporada alta
 						</Text>
 						<Text textType='subtitle' textColor='tertiary'>
 							Abiertos todos los dias - 10:00 - 19:00 hs.
-						</Text>
-
-						<Text textType='title' textColor='tertiary'>
-							Temporada baja
-						</Text>
-						<Text textType='subtitle' textColor='tertiary'>
-							Abiertos Sábados y Domingos - 10:00 - 19:00 hs.
 						</Text>
 
 						<Text textType='subtitle' textColor='tertiary'>
@@ -75,16 +67,21 @@ const StyledUs = styled.div`
 	}
 	.contact-section {
 		width: 100%;
-		height: auto;
+		max-height: 380px;
 		background-color: ${({ theme }) => theme.secundary};
 		padding: ${({ theme }) => theme.spacing.xlg};
 		box-sizing: border-box;
 		border-radius: ${({ theme }) => theme.radiusses.md};
 		display: flex;
 		flex-direction: column;
+
 		align-items: center;
 		text-align: center;
 		gap: ${({ theme }) => theme.spacing.lg};
 		padding-bottom: 20px;
+
+		@media (min-width: ${({ theme }) => theme.breakpoints.sm}) {
+			justify-content: center;
+		}
 	}
 `;

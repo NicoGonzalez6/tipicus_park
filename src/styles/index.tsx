@@ -35,6 +35,8 @@ export const defaultTheme: DefaultTheme = {
 	tertiary: '#ff2a00',
 	secundary: '#222222',
 	primary: '#0a3165',
+	warning: '#ffc12e',
+	warning_background: '#fff9ea',
 	spacing: {
 		sm: '6px',
 		md: '10px',

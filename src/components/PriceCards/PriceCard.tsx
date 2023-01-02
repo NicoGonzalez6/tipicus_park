@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { pricesInterface } from '../../utils/pricesInfo';
+import { pricesInterface } from '../../constants/pricesInfo';
 import Text from '../Text/Text';
 import Logo from '../../assets/Tipicus/Logo-tipicus-blanco.png';
 
@@ -30,18 +30,18 @@ const PriceCard = ({
 					<div className='price-container'>
 						<Text textType='title'>
 							{residentState
-								? residents.half_time
-								: not_residents.half_time}
-						</Text>
-						<Text textType='subtitle'>{`Media Jornada`}</Text>
-					</div>
-					<div className='price-container'>
-						<Text textType='title'>
-							{residentState
 								? residents.full_time
 								: not_residents.full_time}
 						</Text>
 						<Text textType='subtitle'>{`Jornada Completa`}</Text>
+					</div>
+					<div className='price-container'>
+						<Text textType='title'>
+							{residentState
+								? residents.half_time
+								: not_residents.half_time}
+						</Text>
+						<Text textType='subtitle'>{`Media Jornada`}</Text>
 					</div>
 				</div>
 				<img src={Logo} alt='logo'></img>
@@ -92,7 +92,7 @@ const StyledCard = styled.div`
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		justify-content: space-around;
+		justify-content: space-evenly;
 		.price-container {
 			display: flex;
 			align-items: center;

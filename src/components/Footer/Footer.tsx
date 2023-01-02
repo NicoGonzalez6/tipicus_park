@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import Text from '../Text/Text';
-import { AiOutlineInstagram, AiOutlineFacebook } from 'react-icons/ai';
+import {
+	AiOutlineInstagram,
+	AiOutlineFacebook,
+	AiOutlineWhatsApp,
+} from 'react-icons/ai';
 
 const Footer = (): JSX.Element => {
 	const redirect = (url: string) => {
@@ -26,6 +30,15 @@ const Footer = (): JSX.Element => {
 						)
 					}
 				/>
+				<AiOutlineWhatsApp
+					onClick={() =>
+						redirect(
+							'https://api.whatsapp.com/send?phone=2246585824'
+						)
+					}
+				>
+					Click to connect +506 0000 0000
+				</AiOutlineWhatsApp>
 			</div>
 			<Text textColor='white' textType='text'>
 				@2022 Tipicus.com.ar

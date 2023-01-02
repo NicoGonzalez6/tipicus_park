@@ -3,7 +3,7 @@ import Logo from '../../assets/Tipicus/Logo-tipicus-azul.png';
 import { FaBars } from 'react-icons/fa';
 import { useRef, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { navigationLinks } from '../../utils/navigation';
+import { navigationLinks } from '../../constants/navigation';
 
 const Header = (): JSX.Element => {
 	const linksContainer = useRef<any>();

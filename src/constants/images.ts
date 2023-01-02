@@ -6,7 +6,6 @@ import image7 from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-13.
 import image8 from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-14.jpg';
 import image9 from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-17.jpg';
 import image10 from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-16.jpg';
-
 import heroImage from '../assets/Tipicus/Web_Photo_Editor.jpg';
 
 interface ImageInterface {
@@ -20,6 +19,12 @@ export const heroImg: ImageInterface[] = [
 	},
 	{
 		original: image1,
+	},
+	{
+		original: image10,
+	},
+	{
+		original: image7,
 	},
 ];
 export const images: ImageInterface[] = [

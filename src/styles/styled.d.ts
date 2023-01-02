@@ -43,6 +43,7 @@ declare module 'styled-components' {
 	export interface DefaultTheme {
 		white_primary: string;
 		white_secundary: string;
+		warning: string;
 		tertiary: string;
 		primary: string;
 		secundary: string;
@@ -52,5 +53,6 @@ declare module 'styled-components' {
 		breakpoints: breakpoints;
 		container_widths: container_widths;
 		radiusses: radiusses;
+		warning_background: string;
 	}
 }

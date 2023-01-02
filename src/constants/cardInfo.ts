@@ -2,7 +2,11 @@ import card1img from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-7
 import card2img from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-21.jpg';
 import card3img from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-11.jpg';
 import card4img from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-20.jpg';
-import noimage from '../assets/Tipicus/no-image.png';
+import card5img from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-4.jpg';
+import card6img from '../assets/Tipicus/table.jpg';
+import card7img from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-16.jpg';
+import card8img from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-14.jpg';
+import card9img from '../assets/Tipicus/tipicus-parque-acuatico-en-las-toninas-5.jpg';
 
 export interface cardInfoInterface {
 	title: string;
@@ -34,26 +38,26 @@ export const cardInfo: cardInfoInterface[] = [
 	{
 		title: 'Primeros auxilios',
 		text: 'Sala de primeros auxilios para atender cualquier empergencia inmediata',
-		img: noimage,
+		img: card9img,
 	},
 	{
 		title: 'Restaurantes',
 		text: 'Tenemos restaurantes, puestos de licuados y café',
-		img: noimage,
+		img: card6img,
 	},
 	{
 		title: 'Estacionamiento',
 		text: 'Dentro del predio',
-		img: noimage,
+		img: card8img,
 	},
 	{
 		title: 'Mesas familiares',
 		text: 'Parrillas individuales, mesas al aire para disfrutar con amigos o en familia',
-		img: noimage,
+		img: card7img,
 	},
 	{
 		title: 'Juegos',
 		text: 'Entretenimiento para niños y adultos, inflables, canchas de futbol/tenís, vóley, tejos',
-		img: noimage,
+		img: card5img,
 	},
 ];

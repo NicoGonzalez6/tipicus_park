@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ticketInfoInterface } from '../../utils/ticketInfo';
+import { ticketInfoInterface } from '../../constants/ticketInfo';
 import Text from '../Text/Text';
 
 const ServiceCard = ({ title, text }: ticketInfoInterface): JSX.Element => {
